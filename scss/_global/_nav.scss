@@ -1,0 +1,83 @@
+
+nav {
+
+  .logo {
+    font-size: 2.250em;
+    font-weight: 900;
+    letter-spacing: 14px;
+    margin-left: -2px;
+    //color: rgba($mainGrey, .25);
+    color: $mainDark;
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 24px;
+  }
+
+  .profile {
+    margin-bottom: 24px;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      //margin-left: -4px;
+      //margin-left: -44px;
+      margin-right: 12px;
+      float: left;
+    }
+
+    .name {
+      color: $mainDark;
+      font-weight: 700;
+      font-size: 1em;
+      line-height: 32px;
+    }
+  }
+
+  .general {
+    margin-bottom: 32px;
+
+    .time {
+      font-size: 1em;
+      color: $mainBlue;
+    }
+
+    .description {
+      font-weight: 600;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 8px 12px;
+      border-radius: 3px;
+      margin-left: -10px;
+      color: #ACB8C6;
+      transition-duration: .2s;
+
+      &:hover {
+        color: $mainBlue;
+        background-color: rgba($mainBlue,.15);
+      }
+
+      &.active {
+        color: $mainBlue;
+        background-color: rgba($mainBlue,.15);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+  }
+}

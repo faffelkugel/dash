@@ -1,0 +1,84 @@
+// Text Align Classes
+.txt-left{text-align:left;}
+.txt-right{text-align:right;}
+.txt-center{text-align:center;}
+.txt-justify{text-align:justify;}
+
+// Floats
+.left{float:left;}
+.right{float:right;}
+
+// Clearfix
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after{clear:both;}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf{*zoom:1;}
+
+
+
+// Button Reset
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+   -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+           box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+   background: none;
+   border: 0;
+   color: inherit;
+   /* cursor: default; */
+   font: inherit;
+   line-height: normal;
+   overflow: visible;
+   padding: 0;
+   -webkit-appearance: button; /* for input */
+   -webkit-user-select: none; /* for button */
+      -moz-user-select: none;
+       -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+   border: 0;
+   padding: 0;
+}
+
+/* Make `a` like a button */
+[role="button"] {
+   color: inherit;
+   cursor: default;
+   display: inline-block;
+   text-align: center;
+   text-decoration: none;
+   white-space: pre;
+   -webkit-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+}
+
+/* Hides element, by adding display:none to the element */
+.hide { display: none; }

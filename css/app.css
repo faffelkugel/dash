@@ -1203,6 +1203,103 @@ td,
 th {
   padding: 0; }
 
+.txt-left {
+  text-align: left; }
+
+.txt-right {
+  text-align: right; }
+
+.txt-center {
+  text-align: center; }
+
+.txt-justify {
+  text-align: justify; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  /* for input */
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* Make `a` like a button */
+[role="button"] {
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+/* Hides element, by adding display:none to the element */
+.hide {
+  display: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
 body {
   font-family: "SF UI Text";
   font-size: 100%;
@@ -1212,7 +1309,8 @@ h1 {
   font-family: "SF UI Display";
   font-weight: 300;
   font-size: 2.250em;
-  color: #1482D6; }
+  color: #2196F3;
+  margin-bottom: 48px; }
 
 h2 {
   font-family: "SF UI Display";
@@ -1224,7 +1322,304 @@ h3 {
   font-family: "SF UI Display"; }
 
 p, label {
-  font-weight: 600;
-  font-size: 1em;
+  font-weight: 400;
+  font-size: 0.750em;
   color: #ACB8C6;
   line-height: 1.5em; }
+
+li a {
+  font-size: 0.875em; }
+
+nav .logo {
+  font-size: 2.250em;
+  font-weight: 900;
+  letter-spacing: 14px;
+  margin-left: -2px;
+  color: #1A1A21;
+  display: block;
+  margin-bottom: 32px; }
+nav hr {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 24px; }
+nav .profile {
+  margin-bottom: 24px; }
+  nav .profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    float: left; }
+  nav .profile .name {
+    color: #1A1A21;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 32px; }
+nav .general {
+  margin-bottom: 32px; }
+  nav .general .time {
+    font-size: 1em;
+    color: #2196F3; }
+  nav .general .description {
+    font-weight: 600; }
+nav ul {
+  list-style: none;
+  padding: 0; }
+  nav ul li {
+    padding: 8px 12px;
+    border-radius: 3px;
+    margin-left: -10px;
+    color: #ACB8C6;
+    transition-duration: .2s; }
+    nav ul li:hover {
+      color: #2196F3;
+      background-color: rgba(33, 150, 243, 0.15); }
+    nav ul li.active {
+      color: #2196F3;
+      background-color: rgba(33, 150, 243, 0.15); }
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600; }
+
+body {
+  padding: 10vh 0; }
+
+/*.feed {
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      //background: #e5e5e5;
+      margin-bottom: 32px;
+      //line-height: 128px;
+
+      //&> * {
+      //  display: inline-block;
+      //}
+
+      .main {
+        width: 100%;
+        line-height: 24px;
+        height: 24px;
+        background-color: blue;
+
+        &> * {
+          display: inline-block;
+        }
+
+        .check-container {
+          width: 10%;
+          background-color: blue;
+
+          .check {
+            height: 16px;
+            width: 16px;
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+            border-radius: 2px;
+          }
+        }
+
+        .check {
+          height: 16px;
+          width: 16px;
+          border: 1px solid #e5e5e5;
+          background-color: orange;
+          border-radius: 2px;
+          margin-right: 12px;
+        }
+
+        label {
+          padding: 0;
+          margin: 0;
+        }
+
+        .order {
+          font-weight: 500;
+          width: 32px;
+          text-align: center;
+          background-color: red;
+          margin-right: 48px;
+        }
+
+        .task {
+          background-color: green;
+        }
+      }
+
+      .tag {
+
+      }
+
+      .time-estimated {
+
+      }
+
+      .time-due {
+
+      }
+
+      .note {
+
+      }
+    }
+  }
+}*/
+form {
+  display: flex;
+  margin-bottom: 32px; }
+  form input {
+    flex-grow: 1;
+    padding: 10px 0;
+    border: none;
+    font-size: 0.875em;
+    font-style: italic;
+    color: #2196F3;
+    float: left; }
+    form input:focus {
+      outline: none;
+      font-weight: 500; }
+    form input::placeholder {
+      color: #e1e1e1; }
+  form button {
+    font-size: 0.875em;
+    padding: 10px 16px;
+    color: #2196F3;
+    font-weight: 500;
+    border-radius: 3px;
+    background-color: rgba(33, 150, 243, 0.1);
+    float: right; }
+    form button:hover {
+      background-color: rgba(33, 150, 243, 0.2); }
+    form button:active {
+      background-color: #2196F3;
+      color: #ffffff; }
+    form button:disabled {
+      color: #e1e1e1; }
+
+.tasks-flex ul {
+  list-style: none;
+  padding: 0; }
+  .tasks-flex ul ul {
+    width: calc(100% + 64px);
+    margin-left: -64px;
+    border-radius: 3px;
+    transition-duration: .2s;
+    display: flex; }
+    .tasks-flex ul ul:hover {
+      color: #1A1A21;
+      background-color: rgba(33, 150, 243, 0.15); }
+      .tasks-flex ul ul:hover .id {
+        color: rgba(33, 150, 243, 0.5); }
+      .tasks-flex ul ul:hover .status .check {
+        background-color: #ffffff; }
+    .tasks-flex ul ul li {
+      font-size: 0.875em;
+      line-height: 56px;
+      flex-grow: 1;
+      /*&.notes {
+        max-width: 40px;
+        text-align: center;
+      }*/ }
+      .tasks-flex ul ul li.id {
+        max-width: 64px;
+        font-size: 0.750em;
+        font-weight: 500;
+        color: rgba(33, 150, 243, 0);
+        text-align: right;
+        padding-right: 16px; }
+      .tasks-flex ul ul li.status {
+        max-width: 20px; }
+        .tasks-flex ul ul li.status .check {
+          width: 20px;
+          height: 20px;
+          background-color: rgba(33, 150, 243, 0.1);
+          border-radius: 2px;
+          border: none;
+          vertical-align: middle;
+          margin-top: -2px; }
+          .tasks-flex ul ul li.status .check:active {
+            background-color: #2196F3; }
+      .tasks-flex ul ul li.title {
+        width: 20px;
+        flex-grow: 10;
+        padding-left: 24px; }
+        .tasks-flex ul ul li.title .note {
+          margin-top: -8px;
+          margin-bottom: 16px; }
+      .tasks-flex ul ul li.tags {
+        flex-basis: 40px;
+        text-align: right;
+        padding-right: 12px; }
+      .tasks-flex ul ul li.category {
+        flex-basis: 40px;
+        text-align: right;
+        padding-right: 12px; }
+      .tasks-flex ul ul li.due {
+        flex-grow: 1;
+        font-size: 0.750em;
+        color: #ACB8C6;
+        text-align: right;
+        padding-right: 16px; }
+        .tasks-flex ul ul li.due a {
+          color: #637890;
+          font-weight: 500;
+          text-decoration: none; }
+
+.tasks-feed {
+  margin-bottom: 64px; }
+  .tasks-feed ul {
+    list-style: none;
+    padding: 0; }
+    .tasks-feed ul .task-container {
+      line-height: 56px;
+      width: calc(100% + 64px);
+      margin-left: -64px;
+      border-radius: 3px;
+      transition-duration: .2s; }
+      .tasks-feed ul .task-container:hover {
+        color: #1A1A21;
+        background-color: rgba(33, 150, 243, 0.15); }
+        .tasks-feed ul .task-container:hover .order {
+          color: rgba(33, 150, 243, 0.5); }
+        .tasks-feed ul .task-container:hover .check {
+          background-color: #ffffff; }
+      .tasks-feed ul .task-container li.order-container {
+        width: 64px;
+        padding-right: 16px;
+        text-align: right; }
+      .tasks-feed ul .task-container li {
+        display: inline-block;
+        line-height: 32px;
+        margin-right: -5px; }
+        .tasks-feed ul .task-container li .order {
+          font-weight: 500;
+          line-height: 32px;
+          color: rgba(33, 150, 243, 0); }
+        .tasks-feed ul .task-container li .check {
+          width: 20px;
+          height: 20px;
+          background-color: rgba(33, 150, 243, 0.1);
+          border-radius: 2px;
+          border: none;
+          vertical-align: text-top;
+          margin-right: 24px;
+          line-height: 32px;
+          transition-duration: .1s; }
+          .tasks-feed ul .task-container li .check:active {
+            background-color: #2196F3; }
+        .tasks-feed ul .task-container li .task {
+          font-size: 0.875em;
+          line-height: 32px; }
+
+.tasks-feed.completed ul .task-container li .check {
+  background-color: #2196F3; }
+  .tasks-feed.completed ul .task-container li .check img {
+    vertical-align: super; }
+  .tasks-feed.completed ul .task-container li .check:active {
+    background-color: #ffffff; }
+    .tasks-feed.completed ul .task-container li .check:active img {
+      display: none; }
