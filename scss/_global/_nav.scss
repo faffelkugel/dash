@@ -1,4 +1,5 @@
 
+////////// <NAV> //////////
 nav {
 
   .logo {
@@ -6,33 +7,25 @@ nav {
     font-weight: 900;
     letter-spacing: 14px;
     margin-left: -2px;
-    //color: rgba($mainGrey, .25);
-    color: $mainDark;
+    color: $colorDark;
     display: block;
     margin-bottom: 32px;
   }
 
-  hr {
-    border: none;
-    border-bottom: 1px solid #e5e5e5;
-    margin-top: 24px;
-  }
-
   .profile {
+    @extend .disableListSyle;
     margin-bottom: 24px;
 
     img {
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      //margin-left: -4px;
-      //margin-left: -44px;
       margin-right: 12px;
       float: left;
     }
 
     .name {
-      color: $mainDark;
+      color: $colorDark;
       font-weight: 700;
       font-size: 1em;
       line-height: 32px;
@@ -44,7 +37,7 @@ nav {
 
     .time {
       font-size: 1em;
-      color: $mainBlue;
+      color: $colorBlue;
     }
 
     .description {
@@ -64,13 +57,17 @@ nav {
       transition-duration: .2s;
 
       &:hover {
-        color: $mainBlue;
-        background-color: rgba($mainBlue,.15);
+        color: $colorBlue;
+        background-color: rgba($colorBlue,.15);
       }
 
       &.active {
-        color: $mainBlue;
-        background-color: rgba($mainBlue,.15);
+        color: $colorBlue;
+        background-color: rgba($colorBlue,.15);
+      }
+
+      a {
+        font-size: 0.875em;
       }
     }
   }

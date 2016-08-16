@@ -1,0 +1,19 @@
+
+////////// GENERAL FUNCTIONS //////////
+//@mixin disableListStyle {}
+.disableListSyle {
+  list-style: none;
+  padding: 0;
+}
+
+.success {
+  @extend .disableListSyle;
+}
+
+////////// COLOR FUNCTIONS //////////
+@mixin backgroundColor ($color,$alpha) {
+  background-color: rgba($color,$alpha);
+}
+@mixin FontColor ($color,$alpha) {
+  background-color: rgba($color,$alpha);
+}

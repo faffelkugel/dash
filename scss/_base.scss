@@ -3,89 +3,17 @@ body {
   padding: 10vh 0;
 }
 
-/*.feed {
+.title-section {
 
-  ul {
-    list-style: none;
-    padding: 0;
+  .title {
+    display: flex;
 
-    li {
-      //background: #e5e5e5;
-      margin-bottom: 32px;
-      //line-height: 128px;
-
-      //&> * {
-      //  display: inline-block;
-      //}
-
-      .main {
-        width: 100%;
-        line-height: 24px;
-        height: 24px;
-        background-color: blue;
-
-        &> * {
-          display: inline-block;
-        }
-
-        .check-container {
-          width: 10%;
-          background-color: blue;
-
-          .check {
-            height: 16px;
-            width: 16px;
-            border: 1px solid #e5e5e5;
-            background-color: #fff;
-            border-radius: 2px;
-          }
-        }
-
-        .check {
-          height: 16px;
-          width: 16px;
-          border: 1px solid #e5e5e5;
-          background-color: orange;
-          border-radius: 2px;
-          margin-right: 12px;
-        }
-
-        label {
-          padding: 0;
-          margin: 0;
-        }
-
-        .order {
-          font-weight: 500;
-          width: 32px;
-          text-align: center;
-          background-color: red;
-          margin-right: 48px;
-        }
-
-        .task {
-          background-color: green;
-        }
-      }
-
-      .tag {
-
-      }
-
-      .time-estimated {
-
-      }
-
-      .time-due {
-
-      }
-
-      .note {
-
-      }
+    img {
+      margin-left: -24px;
+      margin-right: 8px;
     }
   }
-}*/
+}
 
 form {
   display: flex;
@@ -95,9 +23,10 @@ form {
     flex-grow: 1;
     padding: 10px 0;
     border: none;
-    font-size: 0.875em;
+    //font-size: 0.875em;
+    font-size: 1em;
     font-style: italic;
-    color: $mainBlue;
+    color: $colorBlue;
     float: left;
 
     &:focus {
@@ -113,19 +42,19 @@ form {
   button {
     font-size: 0.875em;
     padding: 10px 16px;
-    color: $mainBlue;
+    color: $colorBlue;
     font-weight: 500;
     border-radius: 3px;
-    background-color: rgba($mainBlue,.1);
+    background-color: rgba($colorBlue,.1);
     float: right;
 
     &:hover {
-      background-color: rgba($mainBlue,.2);
+      background-color: rgba($colorBlue,.2);
     }
 
     &:active {
-      background-color: $mainBlue;
-      color: #ffffff;
+      background-color: $colorBlue;
+      color: $colorWhite;
     }
 
     &:disabled {
@@ -135,6 +64,8 @@ form {
 }
 
 .tasks-flex {
+  margin-bottom: 32px;
+
   ul {
     list-style: none;
     padding: 0;
@@ -147,11 +78,12 @@ form {
       display: flex;
 
       &:hover {
-        color: $mainDark;
-        background-color: rgba($mainBlue,.15);
+        color: $colorDark;
+        background-color: rgba($colorBlue,.15);
 
-        .id { color: rgba($mainBlue, .5); }
-        .status .check { background-color: #ffffff; }
+        .id { color: rgba($colorBlue, .5); }
+        .status .check, .tags .tag { background-color: $colorWhite; box-shadow: 0 2px 4px rgba($colorBlue,.15); }
+        .tags, .category { visibility: inherit; }
       }
 
       li {
@@ -159,11 +91,17 @@ form {
         line-height: 56px;
         flex-grow: 1;
 
+        a {
+          color: darken($colorGrey, 10%);
+          font-weight: 500;
+          text-decoration: none;
+        }
+
         &.id {
           max-width: 64px;
           font-size: 0.750em;
           font-weight: 500;
-          color: rgba($mainBlue, 0);
+          color: rgba($colorBlue, 0);
           text-align: right;
           padding-right: 16px;
         }
@@ -174,14 +112,15 @@ form {
           .check {
             width: 20px;
             height: 20px;
-            background-color: rgba($mainBlue,.1);
+            //background-color: rgba($colorBlue,.1);
+            @include backgroundColor($colorGrey,$alphaTen);
             border-radius: 2px;
             border: none;
             vertical-align: middle;
             margin-top: -2px;
 
             &:active {
-              background-color: $mainBlue;
+              background-color: $colorBlue;
             }
           }
         }
@@ -198,30 +137,40 @@ form {
         }
 
         &.tags {
-          flex-basis: 40px;
+          flex-basis: 60px;
           text-align: right;
           padding-right: 12px;
+          visibility: hidden;
+
+          .tag {
+            //color: darken($colorGrey, 15%);
+            //color: $colorGrey;
+            font-size: 0.750em;
+            font-weight: 500;
+            padding: 4px 8px;
+            margin: 0 2px;
+            border-radius: 2px;
+            background-color: lighten($colorDark, 85%);
+          }
         }
 
         &.category {
+          //flex-basis: 80px;
+          color: $colorGrey;
+          font-size: 0.750em;
           flex-basis: 40px;
           text-align: right;
           padding-right: 12px;
+          visibility: hidden;
         }
 
         &.due {
+          //flex-basis: 280px;
           flex-grow: 1;
           font-size: 0.750em;
-          color: $mainGrey;
+          color: $colorGrey;
           text-align: right;
           padding-right: 16px;
-
-          a {
-            color: darken($mainGrey, 25%);
-            //color: $mainBlue;
-            font-weight: 500;
-            text-decoration: none;
-          }
         }
 
         /*&.notes {
@@ -233,120 +182,24 @@ form {
   }
 }
 
-.tasks-feed {
-  margin-bottom: 64px;
-
-  ul {
-    list-style: none;
-    padding: 0;
-
-    .task-container {
-      line-height: 56px;
-      width: calc(100% + 64px);
-      margin-left: -64px;
-      border-radius: 3px;
-      transition-duration: .2s;
-
-      &:hover {
-        color: $mainDark;
-        background-color: rgba($mainBlue,.15);
-
-        .order {
-          //color: $mainBlue;
-          color: rgba($mainBlue, .5);
-        }
-
-        .check {
-          background-color: #ffffff;
-        }
-      }
-
-      li.order-container {
-        width: 64px;
-        padding-right: 16px;
-        text-align: right;
-      }
-
-      li {
-        display: inline-block;
-        line-height: 32px;
-        margin-right: -5px;
-
-        .order {
-          font-weight: 500;
-          line-height: 32px;
-          //color: #e1e1e1;
-          //color: rgba($mainBlue, .15);
-          color: rgba($mainBlue, 0);
-        }
-
-        .check {
-          width: 20px;
-          height: 20px;
-          background-color: rgba($mainBlue,.1);
-          border-radius: 2px;
-          border: none;
-          vertical-align: text-top;
-          margin-right: 24px;
-          line-height: 32px;
-          transition-duration: .1s;
-
-          &:active {
-            background-color: $mainBlue;
-          }
-        }
-
-        .task {
-          font-size: 0.875em;
-          line-height: 32px;
-        }
-      }
-    }
-  }
-}
-
-.tasks-feed.completed {
-  //background-color: red;
-
+.tasks-flex.completed {
   ul {
 
-    .task-container {
-
-      &:hover {
-
-        .order {
-        }
-
-        .check {
-        }
-      }
-
-      li.order-container {
-      }
+    ul {
 
       li {
 
-        .order {
-        }
+        &.status {
 
-        .check {
-          background-color: $mainBlue;
+          .check {
+            background-color: $colorBlue;
 
-          img {
-            vertical-align: super;
-          }
+            &:active {
+              background-color: $colorWhite;
 
-          &:active {
-            //background-color: rgba($mainBlue,.1);
-            background-color: #ffffff;
-
-            img {
-              display: none;
+              img { display: none;}
             }
           }
-        }
-
-        .task {
         }
       }
     }

@@ -11,7 +11,7 @@ h1 {
   font-family: "SF UI Display";
   font-weight: 300;
   font-size: 2.250em;
-  color: $mainBlue;
+  color: $colorBlue;
   margin-bottom: 48px;
   //margin-bottom: 128px;
 }
@@ -20,7 +20,7 @@ h2 {
   font-family: "SF UI Display";
   font-weight: 500;
   font-size: 1.125em;
-  color: $mainDark;
+  color: $colorDark;
 }
 
 h3 {
@@ -31,10 +31,6 @@ p,label {
   //font-weight: 600;
   font-weight: 400;
   font-size: 0.750em;
-  color: $mainGrey;
+  color: $colorGrey;
   line-height: 1.5em;
-}
-
-li a {
-  font-size: 0.875em;
 }

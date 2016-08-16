@@ -14,10 +14,10 @@
 
           <a href="#" class="logo">DASH</a>
 
-          <div class="profile">
-            <img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/11080977_10205739282258356_6445926540007831602_n.jpg?oh=4d0773c7a67cf7749a23d8a93532362d&oe=5822CF13" alt="Michael Sveistrup">
-            <p class="name">Michael Sveistrup</p>
-          </div>
+          <ul class="profile">
+            <li><img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/11080977_10205739282258356_6445926540007831602_n.jpg?oh=4d0773c7a67cf7749a23d8a93532362d&oe=5822CF13" alt="Michael Sveistrup"></li>
+            <li><p class="name">Michael Sveistrup</p></li>
+          </ul>
 
           <div class="general">
             <p class="time">Wednesday, August 10th 2016</p>
@@ -44,7 +44,7 @@
           <p class="right">6 active tasks</p>
         </div>
 
-        <form action="" method="post" class="cf">
+        <form action="" method="post">
           <input type="text" placeholder="Start writing a task name">
           <button type="submit" name="button">Add Task</button>
         </form>
@@ -55,11 +55,11 @@
             <!-- Task START -->
             <li>
               <ul>
-                <li class="id">#1</li>
+                <li class="id">#6</li>
                 <li class="status"><button class="check"></button></li>
                 <li class="title"><h4>Solve Problem Solving</h4><p class="note hide">Curabitur hendrerit ligula nec posuere hendrerit. Etiam id diam tempus, posuere tortor vitae, semper felis. Phasellus cursus quam vitae tellus congue euismod. Mauris vulputate neque eget turpis tempor vestibulum. Etiam faucibus tempor viverra. Donec ex ante, dictum facilisis gravida vel, feugiat vel erat. Sed nisi nibh, finibus ut orci in, maximus euismod nisi. Integer venenatis tortor tortor, sed facilisis dolor pulvinar a. Phasellus et lorem posuere, tempor velit at, gravida ante. Fusce efficitur dolor vitae faucibus elementum. Cras vitae enim condimentum, ultrices arcu nec, volutpat nunc. Ut congue, est faucibus pellentesque placerat, mauris dui scelerisque ipsum, vel varius magna urna vitae nisi. Quisque in nunc libero. Donec id arcu in nulla eleifend tincidunt sit amet vel orci. Vivamus viverra quis nulla at dapibus.</p></li>
-                <li class="tags">Life</li>
-                <li class="category">Home</li>
+                <li class="tags"><a href="#" class="tag">Life</a></li>
+                <li class="category">In <a href="#">Home</a></li>
                 <li class="due">Due on <a href="#">Wednesday, September 30, 2020</a></li>
               </ul>
             </li>
@@ -68,11 +68,11 @@
             <!-- Task START -->
             <li>
               <ul>
-                <li class="id">#2</li>
+                <li class="id">#7</li>
                 <li class="status"><button class="check"></button></li>
                 <li class="title"><h4>Learn From NASA</h4></li>
-                <li class="tags">Mountain.io</li>
-                <li class="category">Work</li>
+                <li class="tags"><a href="#"  class="tag">Mountain.io</a></li>
+                <li class="category">In <a href="#">Work</a></li>
                 <li class="due">No due date</li>
               </ul>
             </li>
@@ -81,12 +81,78 @@
             <!-- Task START -->
             <li>
               <ul>
-                <li class="id">#3</li>
+                <li class="id">#8</li>
                 <li class="status"><button class="check"></button></li>
                 <li class="title"><h4>Win the Nobel Price</h4></li>
-                <li class="tags">Aviate</li>
-                <li class="category">Work</li>
+                <li class="tags"><a href="#" class="tag">Aviate</a></li>
+                <li class="category">In <a href="#">Work</a></li>
                 <li class="due">No due date</li>
+              </ul>
+            </li>
+            <!-- Task END -->
+
+            <!-- Task START -->
+            <li>
+              <ul>
+                <li class="id">#9</li>
+                <li class="status"><button class="check"></button></li>
+                <li class="title"><h4>Accept 1 million Dollars</h4></li>
+                <li class="tags"><a href="#" class="tag">Aviate</a></li>
+                <li class="category">In <a href="#">Work</a></li>
+                <li class="due">No due date</li>
+              </ul>
+            </li>
+            <!-- Task END -->
+
+            <!-- Task START -->
+            <li>
+              <ul>
+                <li class="id">#10</li>
+                <li class="status"><button class="check"></button></li>
+                <li class="title"><h4>Take a Sabbatical Year</h4></li>
+                <li class="tags"><a href="#" class="tag">Aviate</a></li>
+                <li class="category">In <a href="#">Work</a></li>
+                <li class="due">No due date</li>
+              </ul>
+            </li>
+            <!-- Task END -->
+
+            <!-- Task START -->
+            <li>
+              <ul>
+                <li class="id">#11</li>
+                <li class="status"><button class="check"></button></li>
+                <li class="title"><h4>Play Pokémon</h4></li>
+                <li class="tags"><a href="#" class="tag">Aviate</a></li>
+                <li class="category">In <a href="#">Work</a></li>
+                <li class="due">No due date</li>
+              </ul>
+            </li>
+            <!-- Task END -->
+
+          </ul>
+        </div>
+
+        <div class="title-section">
+          <div class="title">
+            <img src="resources/icons/check_large.svg" alt="checkmark">
+            <h2>Recently Completed Tasks</h2>
+          </div>
+          <p>Here is shown the tasks completed in the last 7 days.<br>This gives a nice clear overview and a sense of accomplicement.</p>
+        </div>
+
+        <div class="tasks-flex completed">
+          <ul>
+
+            <!-- Task START -->
+            <li>
+              <ul>
+                <li class="id">#5</li>
+                <li class="status"><button class="check"><img src="resources/icons/check_small.svg"></button></li>
+                <li class="title"><h4>Start Work at Server.pro</h4></li>
+                <li class="tags"><a href="#" class="tag">Aviate</a></li>
+                <li class="category">In <a href="#">Work</a></li>
+                <li class="due">Completed on <a href="#">Tuesday, November 15, 2016</a></li>
               </ul>
             </li>
             <!-- Task END -->
@@ -95,11 +161,11 @@
             <li>
               <ul>
                 <li class="id">#4</li>
-                <li class="status"><button class="check"></button></li>
-                <li class="title"><h4>Accept 1 million Dollars</h4></li>
-                <li class="tags">Aviate</li>
-                <li class="category">Work</li>
-                <li class="due">No due date</li>
+                <li class="status"><button class="check"><img src="resources/icons/check_small.svg"></button></li>
+                <li class="title"><h4>Start Paternity Leave</h4></li>
+                <li class="tags"><a href="#" class="tag">Life</a><a href="#" class="tag">Baby</a></li>
+                <li class="category">In <a href="#">Home</a></li>
+                <li class="due">Completed on <a href="#">Tuesday, October 11, 2016</a></li>
               </ul>
             </li>
             <!-- Task END -->
@@ -107,12 +173,12 @@
             <!-- Task START -->
             <li>
               <ul>
-                <li class="id">#5</li>
-                <li class="status"><button class="check"></button></li>
-                <li class="title"><h4>Take a Sabbath Year</h4></li>
-                <li class="tags">Aviate</li>
-                <li class="category">Work</li>
-                <li class="due">No due date</li>
+                <li class="id">#3</li>
+                <li class="status"><button class="check"><img src="resources/icons/check_small.svg"></button></li>
+                <li class="title"><h4>Welcome Baby to the World</h4></li>
+                <li class="tags"><a href="#" class="tag">Life</a></li>
+                <li class="category">In <a href="#">Work</a></li>
+                <li class="due">Completed on <a href="#">Tuesday, October 11, 2016</a></li>
               </ul>
             </li>
             <!-- Task END -->
@@ -120,326 +186,31 @@
             <!-- Task START -->
             <li>
               <ul>
-                <li class="id">#6</li>
-                <li class="status"><button class="check"></button></li>
-                <li class="title"><h4>Play Pokémon</h4></li>
-                <li class="tags">Aviate</li>
-                <li class="category">Work</li>
-                <li class="due">No due date</li>
+                <li class="id">#2</li>
+                <li class="status"><button class="check"><img src="resources/icons/check_small.svg"></button></li>
+                <li class="title"><h4>Finish Education</h4></li>
+                <li class="tags"><a href="#" class="tag">Life</a><a href="#" class="tag">Media College</a></li>
+                <li class="category">In <a href="#">Education</a></li>
+                <li class="due">Completed on <a href="#">Friday, September 30, 2016</a></li>
+              </ul>
+            </li>
+            <!-- Task END -->
+
+            <!-- Task START -->
+            <li>
+              <ul>
+                <li class="id">#1</li>
+                <li class="status"><button class="check"><img src="resources/icons/check_small.svg"></button></li>
+                <li class="title"><h4>Attend Joshua & Emilys Wedding</h4></li>
+                <li class="tags"><a href="#" class="tag">Life</a></li>
+                <li class="category">In <a href="#">Home</a></li>
+                <li class="due">Completed on <a href="#">Wednesday, September 30, 2020</a></li>
               </ul>
             </li>
             <!-- Task END -->
 
           </ul>
         </div>
-
-        <div class="tasks-feed">
-          <ul>
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#1</label>
-                </li>
-                <li>
-                  <button class="check"></button>
-                </li>
-                <li>
-                  <h4 class="task">Solve Problem Solving</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#2</label>
-                </li>
-                <li>
-                  <button class="check"></button>
-                </li>
-                <li>
-                  <h4 class="task">Learn from NASA</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#3</label>
-                </li>
-                <li>
-                  <button class="check"></button>
-                </li>
-                <li>
-                  <h4 class="task">Win the Nobel Price</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#4</label>
-                </li>
-                <li>
-                  <button class="check"></button>
-                </li>
-                <li>
-                  <h4 class="task">Accept 1 million Dollars</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#5</label>
-                </li>
-                <li>
-                  <button class="check"></button>
-                </li>
-                <li>
-                  <h4 class="task">Take a Sabbath Year</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#6</label>
-                </li>
-                <li>
-                  <button class="check"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-          </ul>
-        </div>
-
-        <img src="resources/icons/check_large.svg" alt="checkmark">
-        <h2>Recently Completed Tasks</h2>
-        <p>Here is shown the tasks completed in the last 7 days.<br>This gives a nice clear overview and a sense of accomplicement.</p>
-
-        <div class="tasks-feed completed">
-          <ul>
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#48</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Solve Problem Solving</h4>
-                </li>
-                <li>
-                  <p>Completed on Sunday, August 14th 2016</p>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#47</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Learn from NASA</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#46</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Win the Nobel Price</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#45</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Accept 1 million Dollars</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#44</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Take a Sabbath Year</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#43</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#43</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#43</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#43</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#43</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#43</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-            <!-- Task START -->
-            <li class="task-container">
-              <ul>
-                <li class="order-container">
-                  <label class="order">#43</label>
-                </li>
-                <li>
-                  <button class="check"><img src="resources/icons/check_small.svg"></button>
-                </li>
-                <li>
-                  <h4 class="task">Play Pokémon</h4>
-                </li>
-              </ul>
-            </li>
-            <!-- Task END -->
-
-          </ul>
-        </div>
-
       </div>
     </div>
   </section>
