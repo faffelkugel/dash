@@ -1,20 +1,52 @@
 
 ////////// COLORS //////////
-$colorBlue: #2196F3;
-$colorGrey: #ACB8C6;
-$colorDark: #1A1A21;
-$colorWhite: #ffffff;
+$color-blue: #2196F3;
+$color-grey: #ACB8C6;
+$color-dark: #1A1A21;
+$color-white: #ffffff;
+
+////////// TYPOGRAPHY //////////
+// FONT FAMILY //
+$font-family-display: "SF UI Display";
+$font-family-text: "SF UI Text";
+// FONT SIZE //
+$font-size-large: 2.250rem;  // 36px //
+$font-size-medium: 1.125rem;    // 18px //
+$font-size-small: 0.875rem;     // 14px //
+$font-size-base: 0.750rem;    // 12px //
+
+//TODO: Add font-weight vars. E.g. $font-weight-bold
 
 ////////// ALPHA //////////
-$alphaTen: .1;
-$alphaTwenty: .2;
-$alphaThirty: .3;
-$alphaFourty: .4;
-$alphaFifty: .5;
-$alphaSixty: .6;
-$alphaSeventy: .7;
-$alphaEighty: .8;
-$alphaNinety: .9;
-$alphaOneHundred: 1;
+$alpha-five: .05;
+$alpha-ten: .10;
+$alpha-fifteen: .15;
+$alpha-twenty: .20;
+$alpha-twentyfive: .25;
+$alpha-thirty: .30;
+$alpha-thirtyfive: .35;
+$alpha-fourty: .40;
+$alpha-fourtyfive: .45;
+$alpha-fifty: .50;
+$alpha-fiftyfive: .55;
+$alpha-sixty: .60;
+$alpha-sixtyfive: .65;
+$alpha-seventy: .70;
+$alpha-seventyfive: .75;
+$alpha-eighty: .80;
+$alpha-eightyfive: .85;
+$alpha-ninety: .90;
+$alpha-ninetyfive: .95;
+$alpha-one-hundred: 100;
 
-////////// SPACE //////////
+////////// SIZE/SPACE/MARGIN/PADDING //////////
+$size-enormous: 4.000rem; // 64px
+$size-huge: 3.000rem; // 48px
+$size-x-large: 2.000rem; // 32px
+$size-large: 1.500rem; // 24px
+$size-medium: 1.000rem; // 16px //FIXME: Rename to $size-base
+$size-small: 0.750rem; // 12px
+$size-x-small: 0.500rem; // 8px
+$size-tiny: 0.250rem; // 4px
+
+////////// GENERAL //////////

@@ -2,47 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>6 active tasks &#124; Dash</title>
+  <title>DASH &#124; 6 active tasks</title>
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
-  <section class="container-fluid col-md-offset-1">
+  <section class="container-fluid">
+
     <div class="row">
-      <div class="col-md-2">
-        <nav>
 
-          <a href="#" class="logo">DASH</a>
+      <!--  A S I D E  START  -->
+      <div class="col-md-3">
+        <aside class="sidebar">
 
-          <ul class="profile">
-            <li><img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/11080977_10205739282258356_6445926540007831602_n.jpg?oh=4d0773c7a67cf7749a23d8a93532362d&oe=5822CF13" alt="Michael Sveistrup"></li>
-            <li><p class="name">Michael Sveistrup</p></li>
+          <!--  LOGO  -->
+          <a href="/" class="logo">DASH</a>
+
+          <!--  NAVIGATION  START  -->
+          <nav>
+            <!--  MAIN-LEVEL NAVIGATION  START  -->
+            <ul class="main-navigation">
+              <li><a href="#" class="active">Tasks</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Notes</a></li>
+              <li><a href="#">Links</a></li>
+              <li><a href="#">Inventory</a></li>
+              <li><a href="#">Wishlist</a></li> <!--TODO: Add .well at the top, linking to the external wishlist site. Imporcorate these types of mine sites on DASH in general.-->
+            </ul>
+            <!--  MAIN-LEVEL NAVIGATION  END  -->
+            <!--  SUB-LEVEL NAVIGATION  START  -->
+            <ul class="sub-navigation">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+            <!--  SUB-LEVEL NAVIGATION  END  -->
+          </nav>
+          <!--  NAVIGATION  END  -->
+
+          <!--  USER CONTAINER  START  -->
+          <ul class="user-container">
+            <li><a href="#"><img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/11080977_10205739282258356_6445926540007831602_n.jpg?oh=4d0773c7a67cf7749a23d8a93532362d&oe=5822CF13" alt="Michael Sveistrup" class="user-photo"></a></li>
+            <li><a href="#" class="user-name">Michael Sveistrup</a></li>
           </ul>
+          <!--  USER CONTAINER  END  -->
 
-          <div class="general">
-            <p class="time">Wednesday, August 10th 2016</p>
-            <p class="description">Dash is a place to organize the things that matter. Whether it is documents, guides, links & todos.</p>
+          <!--  SITE INFO CONTAINER  START  -->
+          <div class="site-info-container">
+            <p class="global-time"><a href="#">Wednesday, August 10th 2016</a></p>
+            <p class="site-description">Dash is a place to organize the things that matter. Whether it is documents, guides, links & todos.</p>
           </div>
+          <!--  SITE INFO CONTAINER  END  -->
 
-          <ul>
-            <li class="active"><a href="#">Tasks</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Journal</a></li>
-            <li><a href="#">Notes</a></li>
-            <li><a href="#">Links</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Sign out</a></li>
-          </ul>
-
-        </nav>
+        </aside>
       </div>
-      <div class="col-md-8 col-md-offset-1">
+      <!--  A S I D E  END  -->
 
-        <div class="cf">
-          <h1 class="left">Tasks</h1>
-          <p class="right">6 active tasks</p>
-        </div>
+      <!--  C O N T E N T  START  -->
+      <div class="col-md-9">
+
+        <!--  HEADER  START  -->
+        <header>
+          <h1>Tasks</h1>
+          <p class="active-tasks">6 active tasks</p>
+        </header>
+        <!--  HEADER  END  -->
 
         <form action="" method="post">
           <input type="text" placeholder="Start writing a task name">
@@ -210,9 +236,14 @@
             <!-- Task END -->
 
           </ul>
+
         </div>
+
       </div>
+      <!--  C O N T E N T  END  -->
+
     </div>
+
   </section>
 
 </body>

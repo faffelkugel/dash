@@ -7,30 +7,20 @@ body {
   font-weight: normal;
 }
 
-h1 {
-  font-family: "SF UI Display";
-  font-weight: 300;
-  font-size: 2.250em;
-  color: $colorBlue;
-  margin-bottom: 48px;
-  //margin-bottom: 128px;
-}
-
-h2 {
-  font-family: "SF UI Display";
-  font-weight: 500;
-  font-size: 1.125em;
-  color: $colorDark;
-}
+h1 { @include typography-headline($font-family-display,300,$font-size-large,$color-blue); }
+h2 { @include typography-headline($font-family-display,500,$font-size-medium,$color-dark); }
 
 h3 {
   font-family: "SF UI Display";
 }
 
-p,label {
-  //font-weight: 600;
+h4 { @include typography-headline($font-family-display,600,$font-size-small,$color-dark); }
+
+h5 {}
+
+p,label,li {
+  font-size: $font-size-base;
   font-weight: 400;
-  font-size: 0.750em;
-  color: $colorGrey;
+  color: $color-grey;
   line-height: 1.5em;
 }

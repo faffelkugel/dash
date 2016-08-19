@@ -1203,9 +1203,14 @@ td,
 th {
   padding: 0; }
 
-.disableListSyle, .success, nav .profile {
+.reset-list-style, aside.sidebar .user-container, aside.sidebar nav ul {
   list-style: none;
   padding: 0; }
+
+.reset-link-style, aside.sidebar a, aside.sidebar .logo {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none; }
 
 .txt-left {
   text-align: left; }
@@ -1312,92 +1317,129 @@ body {
 h1 {
   font-family: "SF UI Display";
   font-weight: 300;
-  font-size: 2.250em;
-  color: #2196F3;
-  margin-bottom: 48px; }
+  font-size: 2.25rem;
+  color: #2196F3; }
 
 h2 {
   font-family: "SF UI Display";
   font-weight: 500;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: #1A1A21; }
 
 h3 {
   font-family: "SF UI Display"; }
 
-p, label {
+h4 {
+  font-family: "SF UI Display";
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #1A1A21; }
+
+p, label, li {
+  font-size: 0.75rem;
   font-weight: 400;
-  font-size: 0.750em;
   color: #ACB8C6;
   line-height: 1.5em; }
 
-nav .logo {
-  font-size: 2.250em;
-  font-weight: 900;
-  letter-spacing: 14px;
-  margin-left: -2px;
-  color: #1A1A21;
-  display: block;
-  margin-bottom: 32px; }
-nav .profile {
-  margin-bottom: 24px; }
-  nav .profile img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 12px;
-    float: left; }
-  nav .profile .name {
-    color: #1A1A21;
-    font-weight: 700;
-    font-size: 1em;
-    line-height: 32px; }
-nav .general {
-  margin-bottom: 32px; }
-  nav .general .time {
-    font-size: 1em;
-    color: #2196F3; }
-  nav .general .description {
-    font-weight: 600; }
-nav ul {
-  list-style: none;
-  padding: 0; }
-  nav ul li {
-    padding: 8px 12px;
-    border-radius: 3px;
-    margin-left: -10px;
-    color: #ACB8C6;
-    transition-duration: .2s; }
-    nav ul li:hover {
-      color: #2196F3;
-      background-color: rgba(33, 150, 243, 0.15); }
-    nav ul li.active {
-      color: #2196F3;
-      background-color: rgba(33, 150, 243, 0.15); }
-    nav ul li a {
-      font-size: 0.875em; }
-nav a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 600; }
+aside.sidebar {
+  width: 75%;
+  display: flex;
+  flex-direction: column; }
+  aside.sidebar .logo {
+    font-size: 2.25rem;
+    font-weight: 900;
+    letter-spacing: 0.45rem;
+    color: rgba(26, 26, 33, 0.1);
+    display: block;
+    margin-bottom: 2rem;
+    transition-duration: 0.5s; }
+    aside.sidebar .logo:hover {
+      color: #1a1a21; }
+  aside.sidebar .user-container {
+    display: flex;
+    margin-bottom: 1.5rem; }
+    aside.sidebar .user-container li {
+      line-height: 2rem; }
+      aside.sidebar .user-container li .user-photo {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-right: 1rem; }
+      aside.sidebar .user-container li .user-name {
+        color: #1A1A21;
+        font-size: 0.75rem;
+        font-weight: 700; }
+  aside.sidebar .site-info-container {
+    margin-bottom: 2rem; }
+    aside.sidebar .site-info-container .global-time {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #2196F3; }
+    aside.sidebar .site-info-container .site-description {
+      font-weight: 600; }
+  aside.sidebar nav ul.main-navigation li {
+    /*&:hover ul li a.active { color: $color-grey!important; background-color: transparent!important; }
+    &:hover ul li a.active:hover { color: $color-blue!important; @include background-color($color-blue,$alpha-ten); }*/ }
+    aside.sidebar nav ul.main-navigation li a {
+      font-size: 0.875rem;
+      color: #ACB8C6;
+      display: block;
+      border-radius: 3px;
+      padding: 0.5rem 0.75rem;
+      margin-left: -0.75rem;
+      transition-duration: 0.2s; }
+      aside.sidebar nav ul.main-navigation li a:hover {
+        color: #2196F3;
+        background-color: rgba(33, 150, 243, 0.1); }
+      aside.sidebar nav ul.main-navigation li a.active {
+        color: #2196F3;
+        background-color: rgba(33, 150, 243, 0.1); }
+  aside.sidebar nav ul.sub-navigation li {
+    /*&:hover ul li a.active { color: $color-grey!important; background-color: transparent!important; }
+    &:hover ul li a.active:hover { color: $color-blue!important; @include background-color($color-blue,$alpha-ten); }*/ }
+    aside.sidebar nav ul.sub-navigation li a {
+      font-size: 0.75rem;
+      color: #ACB8C6;
+      display: block;
+      border-radius: 3px;
+      padding: 0.5rem 0.75rem;
+      margin-left: -0.75rem;
+      transition-duration: 0.2s; }
+      aside.sidebar nav ul.sub-navigation li a:hover {
+        color: #1A1A21;
+        background-color: rgba(26, 26, 33, 0.1); }
+      aside.sidebar nav ul.sub-navigation li a.active {
+        color: #1A1A21;
+        background-color: rgba(26, 26, 33, 0.1); }
 
 body {
-  padding: 10vh 0; }
+  padding: 4rem; }
+
+header {
+  display: flex;
+  margin-bottom: 3rem; }
+  header h1 {
+    width: 50%; }
+  header .active-tasks {
+    width: 50%;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: right; }
 
 .title-section .title {
   display: flex; }
   .title-section .title img {
-    margin-left: -24px;
-    margin-right: 8px; }
+    margin-left: -1.5rem;
+    margin-right: 0.5rem; }
 
 form {
   display: flex;
-  margin-bottom: 32px; }
+  margin-bottom: 3rem; }
   form input {
     flex-grow: 1;
-    padding: 10px 0;
+    padding: 0.5rem 0;
     border: none;
-    font-size: 1em;
+    font-size: 0.875rem;
     font-style: italic;
     color: #2196F3;
     float: left; }
@@ -1407,8 +1449,8 @@ form {
     form input::placeholder {
       color: #e1e1e1; }
   form button {
-    font-size: 0.875em;
-    padding: 10px 16px;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
     color: #2196F3;
     font-weight: 500;
     border-radius: 3px;
@@ -1423,13 +1465,13 @@ form {
       color: #e1e1e1; }
 
 .tasks-flex {
-  margin-bottom: 32px; }
+  margin-bottom: 2rem; }
   .tasks-flex ul {
     list-style: none;
     padding: 0; }
     .tasks-flex ul ul {
-      width: calc(100% + 64px);
-      margin-left: -64px;
+      width: calc(100% + $size-enormous);
+      margin-left: -4rem;
       border-radius: 3px;
       transition-duration: .2s;
       display: flex; }
@@ -1444,8 +1486,7 @@ form {
         .tasks-flex ul ul:hover .tags, .tasks-flex ul ul:hover .category {
           visibility: inherit; }
       .tasks-flex ul ul li {
-        font-size: 0.875em;
-        line-height: 56px;
+        line-height: 3.5rem;
         flex-grow: 1;
         /*&.notes {
           max-width: 40px;
@@ -1456,19 +1497,18 @@ form {
           font-weight: 500;
           text-decoration: none; }
         .tasks-flex ul ul li.id {
-          max-width: 64px;
-          font-size: 0.750em;
+          max-width: 4rem;
           font-weight: 500;
           color: rgba(33, 150, 243, 0);
           text-align: right;
-          padding-right: 16px; }
+          padding-right: 1rem; }
         .tasks-flex ul ul li.status {
-          max-width: 20px; }
+          max-width: 1rem; }
           .tasks-flex ul ul li.status .check {
-            width: 20px;
-            height: 20px;
-            background-color: rgba(172, 184, 198, 0.1);
+            width: 1rem;
+            height: 1rem;
             border-radius: 2px;
+            background-color: rgba(172, 184, 198, 0.1);
             border: none;
             vertical-align: middle;
             margin-top: -2px; }
@@ -1477,35 +1517,32 @@ form {
         .tasks-flex ul ul li.title {
           width: 20px;
           flex-grow: 10;
-          padding-left: 24px; }
+          padding-left: 1.5rem; }
           .tasks-flex ul ul li.title .note {
-            margin-top: -8px;
-            margin-bottom: 16px; }
+            margin-top: -0.5rem;
+            margin-bottom: 1rem; }
         .tasks-flex ul ul li.tags {
           flex-basis: 60px;
           text-align: right;
-          padding-right: 12px;
+          padding-right: 0.75rem;
           visibility: hidden; }
           .tasks-flex ul ul li.tags .tag {
-            font-size: 0.750em;
             font-weight: 500;
-            padding: 4px 8px;
+            padding: 0.25rem 0.5rem;
             margin: 0 2px;
             border-radius: 2px;
             background-color: #f5f5f7; }
         .tasks-flex ul ul li.category {
           color: #ACB8C6;
-          font-size: 0.750em;
           flex-basis: 40px;
           text-align: right;
-          padding-right: 12px;
+          padding-right: 0.75rem;
           visibility: hidden; }
         .tasks-flex ul ul li.due {
           flex-grow: 1;
-          font-size: 0.750em;
           color: #ACB8C6;
           text-align: right;
-          padding-right: 16px; }
+          padding-right: 1rem; }
 
 .tasks-flex.completed ul ul li.status .check {
   background-color: #2196F3; }

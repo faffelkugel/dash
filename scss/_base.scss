@@ -1,6 +1,22 @@
 
 body {
-  padding: 10vh 0;
+  padding: $size-enormous;
+}
+
+header {
+  display: flex;
+  margin-bottom: $size-huge;
+
+  h1 {
+    width: 50%;
+  }
+
+  .active-tasks {
+    width: 50%;
+    font-size: $font-size-small;
+    font-weight: 500;
+    text-align: right;
+  }
 }
 
 .title-section {
@@ -9,24 +25,24 @@ body {
     display: flex;
 
     img {
-      margin-left: -24px;
-      margin-right: 8px;
+      margin-left: -$size-large;
+      margin-right: $size-x-small;
     }
   }
 }
 
 form {
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: $size-huge;
 
   input {
     flex-grow: 1;
-    padding: 10px 0;
+    padding: $size-x-small 0;
     border: none;
     //font-size: 0.875em;
-    font-size: 1em;
+    font-size: $font-size-small;
     font-style: italic;
-    color: $colorBlue;
+    color: $color-blue;
     float: left;
 
     &:focus {
@@ -40,21 +56,21 @@ form {
   }
 
   button {
-    font-size: 0.875em;
-    padding: 10px 16px;
-    color: $colorBlue;
+    font-size: $font-size-small;
+    padding: $size-x-small $size-medium;
+    color: $color-blue;
     font-weight: 500;
     border-radius: 3px;
-    background-color: rgba($colorBlue,.1);
+    background-color: rgba($color-blue,.1);
     float: right;
 
     &:hover {
-      background-color: rgba($colorBlue,.2);
+      background-color: rgba($color-blue,.2);
     }
 
     &:active {
-      background-color: $colorBlue;
-      color: $colorWhite;
+      background-color: $color-blue;
+      color: $color-white;
     }
 
     &:disabled {
@@ -64,63 +80,58 @@ form {
 }
 
 .tasks-flex {
-  margin-bottom: 32px;
+  margin-bottom: $size-x-large;
 
   ul {
     list-style: none;
     padding: 0;
 
     ul {
-      width: calc(100% + 64px);
-      margin-left: -64px;
+      width: calc(100% + $size-enormous);
+      margin-left: -$size-enormous;
       border-radius: 3px;
       transition-duration: .2s;
       display: flex;
 
       &:hover {
-        color: $colorDark;
-        background-color: rgba($colorBlue,.15);
+        color: $color-dark;
+        background-color: rgba($color-blue,.15);
 
-        .id { color: rgba($colorBlue, .5); }
-        .status .check, .tags .tag { background-color: $colorWhite; box-shadow: 0 2px 4px rgba($colorBlue,.15); }
+        .id { color: rgba($color-blue, .5); }
+        .status .check, .tags .tag { background-color: $color-white; box-shadow: 0 2px 4px rgba($color-blue,.15); }
         .tags, .category { visibility: inherit; }
       }
 
       li {
-        font-size: 0.875em;
-        line-height: 56px;
+        line-height: $size-huge + $size-x-small;
         flex-grow: 1;
 
         a {
-          color: darken($colorGrey, 10%);
+          color: darken($color-grey, 10%);
           font-weight: 500;
           text-decoration: none;
         }
 
         &.id {
-          max-width: 64px;
-          font-size: 0.750em;
+          max-width: $size-enormous;
           font-weight: 500;
-          color: rgba($colorBlue, 0);
+          color: rgba($color-blue, 0);
           text-align: right;
-          padding-right: 16px;
+          padding-right: $size-medium;
         }
 
         &.status {
-        max-width: 20px;
+        max-width: $size-medium;
 
           .check {
-            width: 20px;
-            height: 20px;
-            //background-color: rgba($colorBlue,.1);
-            @include backgroundColor($colorGrey,$alphaTen);
-            border-radius: 2px;
+            @include rounded($size-medium,2px);
+            @include background-color($color-grey,$alpha-ten);
             border: none;
             vertical-align: middle;
             margin-top: -2px;
 
             &:active {
-              background-color: $colorBlue;
+              background-color: $color-blue;
             }
           }
         }
@@ -128,49 +139,46 @@ form {
         &.title {
           width: 20px;
           flex-grow: 10;
-          padding-left: 24px;
+          padding-left: $size-large;
 
           .note {
-            margin-top: -8px;
-            margin-bottom: 16px;
+            margin-top: -$size-x-small;
+            margin-bottom: $size-medium;
           }
         }
 
         &.tags {
           flex-basis: 60px;
           text-align: right;
-          padding-right: 12px;
+          padding-right: $size-small;
           visibility: hidden;
 
           .tag {
-            //color: darken($colorGrey, 15%);
-            //color: $colorGrey;
-            font-size: 0.750em;
+            //color: darken($color-grey, 15%);
+            //color: $color-grey;
             font-weight: 500;
-            padding: 4px 8px;
+            padding: $size-tiny $size-x-small;
             margin: 0 2px;
             border-radius: 2px;
-            background-color: lighten($colorDark, 85%);
+            background-color: lighten($color-dark, 85%);
           }
         }
 
         &.category {
           //flex-basis: 80px;
-          color: $colorGrey;
-          font-size: 0.750em;
+          color: $color-grey;
           flex-basis: 40px;
           text-align: right;
-          padding-right: 12px;
+          padding-right: $size-small;
           visibility: hidden;
         }
 
         &.due {
           //flex-basis: 280px;
           flex-grow: 1;
-          font-size: 0.750em;
-          color: $colorGrey;
+          color: $color-grey;
           text-align: right;
-          padding-right: 16px;
+          padding-right: $size-medium;
         }
 
         /*&.notes {
@@ -192,10 +200,10 @@ form {
         &.status {
 
           .check {
-            background-color: $colorBlue;
+            background-color: $color-blue;
 
             &:active {
-              background-color: $colorWhite;
+              background-color: $color-white;
 
               img { display: none;}
             }
