@@ -1,19 +1,67 @@
 
 ////////// GENERAL FUNCTIONS //////////
-//@mixin disableListStyle {}
-.disableListSyle {
-  list-style: none;
-  padding: 0;
+.reset-list-style { list-style: none; padding: 0; }
+.reset-link-style { color: inherit; font-weight: 500; text-decoration: none; }
+////////// ANIMATION FUNCTIONS //////////
+@mixin transition-duration($duration) {
+  transition-duration: $duration;
 }
 
-.success {
-  @extend .disableListSyle;
+////////// TYPOGRAPHY FUNCTIONS //////////
+@mixin typography-headline($font-family,$font-weight,$font-size,$font-color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  //line-height: $font-size * 1.5;
+  color: $font-color;
+  //letter-spacing: $font-size / 10; //TODO: Figure out proper calculation for letter-spacing
+  //margin-bottom: $font-size * 1.5;
+
+  &:hover {
+    //color: red; //TODO: Figure out if I can use states in my mixins
+  }
 }
 
 ////////// COLOR FUNCTIONS //////////
-@mixin backgroundColor ($color,$alpha) {
+@mixin background-color($color,$alpha) {
   background-color: rgba($color,$alpha);
 }
-@mixin FontColor ($color,$alpha) {
-  background-color: rgba($color,$alpha);
+@mixin font-color($color,$alpha) {
+  color: rgba($color,$alpha);
 }
+
+////////// COMPONENT FUNCTIONS //////////
+// NAV //
+@mixin nav-list-vertical($font-size,$item-padding,$item-left-margin,$item-color) {
+  li {
+
+    /*&:hover ul li a.active { color: $color-grey!important; background-color: transparent!important; }
+    &:hover ul li a.active:hover { color: $color-blue!important; @include background-color($color-blue,$alpha-ten); }*/
+
+    a {
+      font-size: $font-size;
+      color: $color-grey;
+      display: block;
+      border-radius: 3px;
+      padding: $item-padding;
+      margin-left: -$item-left-margin;
+      //margin-left: -12px;
+      //margin-left: str-slice($item-padding,1);
+      //$item-padding: str-insert($item-padding, $padding-vertical, $padding-horizontal);
+      //$item-padding: $padding-vertical, $padding-horizontal;
+      //margin-left: str-slice($item-padding, 1,2);
+      @include transition-duration(.2s);
+
+      &:hover { color: $item-color; @include background-color($item-color,$alpha-ten); }
+      &.active { color: $item-color; @include background-color($item-color,$alpha-ten); }
+    }
+  }
+}
+
+////////// SHAPE FUNCTIONS //////////
+@mixin square($size) { width: $size; height: $size; }
+@mixin rectangle($size) { @include square($size); }
+@mixin rounded($size,$radius) { @include square($size); border-radius: $radius; }
+@mixin circle($size) { @include square($size); border-radius: 50%; }
+@mixin scale-ration($size) { width: $size; height: $size; } //FIXME: Add actual calculations for keeping aspect ration, when scaling.
+// Look into this: https://codepen.io/ricardozea/pen/hftIe

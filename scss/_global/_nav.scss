@@ -1,80 +1,71 @@
 
 ////////// <NAV> //////////
-nav {
+
+aside.sidebar {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  //position: fixed; //FIXME: Outcommented because it believes needs a defined width. Sigh.
+  a { @extend .reset-link-style; }
 
   .logo {
-    font-size: 2.250em;
+    @extend .reset-link-style;
+
+    font-size: $font-size-large;
     font-weight: 900;
-    letter-spacing: 14px;
-    margin-left: -2px;
-    color: $colorDark;
-    display: block;
-    margin-bottom: 32px;
+    //letter-spacing: 0.250em;
+    letter-spacing: $font-size-large * 0.2;
+    @include font-color($color-dark,$alpha-ten);
+    display: block; //<a> tags are inline elements, so I forced it to be block, in order to make margin-bottom work.
+    margin-bottom: $size-x-large;
+    @include transition-duration(.5s);
+
+    &:hover { @include font-color($color-dark,$alpha-one-hundred); }
   }
 
-  .profile {
-    @extend .disableListSyle;
-    margin-bottom: 24px;
+  .user-container {
+    @extend .reset-list-style;
+    display: flex;
+    margin-bottom: $size-large;
 
-    img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      margin-right: 12px;
-      float: left;
-    }
+    li {
+      line-height: $size-x-large;
 
-    .name {
-      color: $colorDark;
-      font-weight: 700;
-      font-size: 1em;
-      line-height: 32px;
+      .user-photo { //FIXME: Make general profile-image styling. Maybe a Mixin?
+        @include circle($size-x-large);
+        margin-right: $size-medium;
+      }
+      .user-name {
+        color: $color-dark;
+        font-size: $font-size-base;
+        font-weight: 700;
+      }
     }
   }
 
-  .general {
-    margin-bottom: 32px;
+  .site-info-container {
+    margin-bottom: $size-x-large;
 
-    .time {
-      font-size: 1em;
-      color: $colorBlue;
+    .global-time {
+      font-size: $font-size-small;
+      font-weight: 500;
+      color: $color-blue;
     }
-
-    .description {
+    .site-description {
       font-weight: 600;
     }
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
+  nav {
+    ul {
+      @extend .reset-list-style;
 
-    li {
-      padding: 8px 12px;
-      border-radius: 3px;
-      margin-left: -10px;
-      color: #ACB8C6;
-      transition-duration: .2s;
-
-      &:hover {
-        color: $colorBlue;
-        background-color: rgba($colorBlue,.15);
+      &.main-navigation {
+        @include nav-list-vertical($font-size-small,$size-x-small $size-small,$size-small,$color-blue);
       }
-
-      &.active {
-        color: $colorBlue;
-        background-color: rgba($colorBlue,.15);
-      }
-
-      a {
-        font-size: 0.875em;
+      &.sub-navigation {
+        @include nav-list-vertical($font-size-base,$size-x-small $size-small,$size-small,$color-dark);
       }
     }
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
   }
 }
