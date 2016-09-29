@@ -1,0 +1,26 @@
+
+////////// GENERAL FUNCTIONS //////////
+.reset-list-style { list-style: none; padding: 0; }
+.reset-link-style { color: inherit; font-weight: 500; text-decoration: none; }
+
+////////// ANIMATION FUNCTIONS //////////
+@import "_animation";
+
+////////// TYPOGRAPHY FUNCTIONS //////////
+@import "_typography";
+@import "_links";
+
+////////// COLOR FUNCTIONS //////////
+@import "_color";
+
+////////// COMPONENT FUNCTIONS //////////
+@import "_components";
+
+////////// SHAPE FUNCTIONS //////////
+@import "_shapes";
+
+////////// STATES FUNCTIONS //////////
+@import "_states";
+
+////////// BUTTONS FUNCTIONS //////////
+@import "_buttons";

@@ -2,7 +2,7 @@
 ////////// <NAV> //////////
 
 aside.sidebar {
-  width: 75%;
+  //width: 75%; //FIXME: Just delete this. Idk, why I haven't removed it yet.
   display: flex;
   flex-direction: column;
   //position: fixed; //FIXME: Outcommented because it believes needs a defined width. Sigh.
@@ -12,7 +12,7 @@ aside.sidebar {
     @extend .reset-link-style;
 
     font-size: $font-size-large;
-    font-weight: 900;
+    font-weight: $font-weight-heavy;
     //letter-spacing: 0.250em;
     letter-spacing: $font-size-large * 0.2;
     @include font-color($color-dark,$alpha-ten);
@@ -33,27 +33,25 @@ aside.sidebar {
 
       .user-photo { //FIXME: Make general profile-image styling. Maybe a Mixin?
         @include circle($size-x-large);
-        margin-right: $size-medium;
+        margin-right: $size-small;
       }
       .user-name {
         color: $color-dark;
-        font-size: $font-size-base;
-        font-weight: 700;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bolder;
       }
     }
   }
 
   .site-info-container {
     margin-bottom: $size-x-large;
+    font-weight: $font-weight-bolder;
 
     .global-time {
       font-size: $font-size-small;
-      font-weight: 500;
       color: $color-blue;
     }
-    .site-description {
-      font-weight: 600;
-    }
+    .site-description {  }
   }
 
   nav {

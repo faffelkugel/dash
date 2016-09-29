@@ -1,0 +1,17 @@
+
+// SQUARE //
+@mixin square($size) { width: $size; height: $size; }
+
+// RECTANGLE //
+@mixin rectangle($size) { @include square($size); }
+
+// ROUNDED //
+@mixin rounded($size,$radius) { @include square($size); border-radius: $radius; }
+
+// CIRCLE //
+@mixin circle($size) { @include square($size); border-radius: 50%; }
+
+// SCALE-RATIO //
+@mixin scale-ratio($size) { width: $size; height: $size; } //FIXME: Add actual calculations for keeping aspect ration, when scaling.
+
+//TODO: Look into this: https://codepen.io/ricardozea/pen/hftIe

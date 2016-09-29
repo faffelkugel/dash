@@ -1,0 +1,13 @@
+
+header {
+  display: flex;
+  margin-bottom: $size-huge;
+
+  h1 { flex-grow: 1; }
+
+  .additional-info {
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    text-align: right;
+  }
+}

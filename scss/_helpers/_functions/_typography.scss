@@ -1,0 +1,16 @@
+
+// HEADLINE //
+//NAME                                      DESCRIPTION
+@mixin typography-headline($font-family,$font-weight,$font-size,$font-color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  //line-height: $font-size * 1.5;
+  color: $font-color;
+  //letter-spacing: $font-size / 10; //TODO: Figure out proper calculation for letter-spacing
+  //margin-bottom: $font-size * 1.5;
+
+  &:hover {
+    //color: red; //TODO: Figure out if I can use states in my mixins
+  }
+}
