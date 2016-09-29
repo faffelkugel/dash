@@ -1,0 +1,6 @@
+
+// DURATION //
+//NAME                                      DESCRIPTION
+@mixin transition-duration($duration) {
+  transition-duration: $duration;
+}

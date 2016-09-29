@@ -1,0 +1,16 @@
+
+// BACKGROUND COLOR //
+@mixin background-color($color,$alpha) {
+  background-color: rgba($color,$alpha);
+}
+
+// FONT COLOR //
+@mixin font-color($color,$alpha) {
+  color: rgba($color,$alpha);
+}
+
+// COMBINED COLOR //
+@mixin combined-color($bg-color,$bg-alpha,$font-color,$font-alpha) {
+  @include background-color($bg-color,$bg-alpha);
+  @include font-color($font-color,$font-alpha);
+}

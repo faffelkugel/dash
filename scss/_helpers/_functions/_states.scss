@@ -1,0 +1,52 @@
+
+@mixin state-all($font-color,$background-color,$alpha) {
+  // Base
+  color: $font-color;
+  background-color: rgba($background-color,$alpha);
+
+  &:link {
+    color: $font-color;
+    background-color: $background-color;
+  }
+  &:visited {
+    color: $font-color;
+    background-color: $background-color;
+  }
+  &:hover {
+    @include state-hover($font-color,$background-color,$alpha);
+  }
+  &:active {
+    color: $font-color;
+    background-color: $background-color;
+  }
+  &.active {
+    color: $font-color;
+    background-color: $background-color;
+  }
+  &:checked {
+    color: $font-color;
+    background-color: $background-color;
+  }
+  &:disabled {
+    color: $font-color;
+    background-color: $background-color;
+  }
+  &:required {
+    color: $font-color;
+    background-color: $background-color;
+  }
+}
+
+// state-button
+// state-input
+// state-link
+// state-object
+
+//// Individual States
+@mixin state-hover($font-color,$background-color,$alpha) {
+  color: $font-color;
+  background-color: rgba($background-color,$alpha);
+}
+
+
+//// Items

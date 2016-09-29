@@ -1,0 +1,28 @@
+
+// VERTICAL NAV //
+//NAME                                      DESCRIPTION
+@mixin nav-list-vertical($font-size,$item-padding,$item-left-margin,$item-color) {
+  li {
+
+    /*&:hover ul li a.active { color: $color-grey!important; background-color: transparent!important; }
+    &:hover ul li a.active:hover { color: $color-blue!important; @include background-color($color-blue,$alpha-ten); }*/
+
+    a {
+      font-size: $font-size;
+      color: $color-grey;
+      display: block;
+      border-radius: 3px;
+      padding: $item-padding;
+      margin-left: -$item-left-margin;
+      //margin-left: -12px;
+      //margin-left: str-slice($item-padding,1);
+      //$item-padding: str-insert($item-padding, $padding-vertical, $padding-horizontal);
+      //$item-padding: $padding-vertical, $padding-horizontal;
+      //margin-left: str-slice($item-padding, 1,2);
+      @include transition-duration(.2s);
+
+      &:hover { color: $item-color; @include background-color($item-color,$alpha-ten); }
+      &.active { color: $item-color; @include background-color($item-color,$alpha-ten); }
+    }
+  }
+}

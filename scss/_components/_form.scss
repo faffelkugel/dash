@@ -1,0 +1,49 @@
+
+form {
+  display: flex;
+  margin-bottom: $size-huge;
+
+  input {
+    flex-grow: 1;
+    padding: $size-x-small 0;
+    border: none;
+    //font-size: 0.875em;
+    font-size: $font-size-small;
+    font-style: italic;
+    color: $color-blue;
+    float: left;
+
+    &:focus {
+      outline: none;
+      font-weight: $font-weight-bold;
+    }
+
+    &::placeholder {
+      //color: #e1e1e1;
+      color: rgba($color-grey,$alpha-thirtyfive);
+    }
+  }
+
+  button {
+    font-size: $font-size-small;
+    padding: $size-x-small $size-medium;
+    color: $color-blue;
+    font-weight: $font-weight-bold;
+    border-radius: 3px;
+    background-color: rgba($color-blue,.1);
+    float: right;
+
+    &:hover {
+      background-color: rgba($color-blue,.2);
+    }
+
+    &:active {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+
+    &:disabled {
+      color: #e1e1e1;
+    }
+  }
+}

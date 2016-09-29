@@ -1,13 +1,19 @@
 
 ////////// HELPERS //////////
-@import "_helpers/grid";
 @import "_helpers/normalize";
-@import "_helpers/variables";
-@import "_helpers/functions";
+@import "_helpers/_variables/base";
+@import "_helpers/_functions/base";
 @import "_helpers/tools";
 
 ////////// GLOBAL //////////
+@import "_global/grid";
 @import "_global/typography";
-@import "_global/nav";
+
+////////// COMPONENTS //////////
+@import "_components/nav";
+@import "_components/header";
+@import "_components/form";
+@import "_components/alerts";
+@import "_components/lists";
 
 @import "base";
